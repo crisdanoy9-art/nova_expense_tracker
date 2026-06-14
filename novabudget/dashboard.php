@@ -186,7 +186,7 @@ foreach ($catBreakdown as $c) { $catLabels[] = $c['emoji'].' '.explode(' ',$c['n
   <div class="ai-panel">
     <div style="display:flex;align-items:center;gap:11px;margin-bottom:12px">
       <div class="ai-ico">✦</div>
-      <div><div style="font-size:13.5px;font-weight:600">AI Spending Insight</div><div style="font-size:11px;color:var(--text3)">Powered by Claude</div></div>
+      <div><div style="font-size:13.5px;font-weight:600">Spending Insight</div><div style="font-size:11px;color:var(--text3)">Powered by Claude</div></div>
       <button class="btn-outline btn-sm" style="margin-left:auto" onclick="getInsight()"><i class="bi bi-stars"></i> Analyze</button>
     </div>
     <div class="ai-txt" id="ai-dash">Click <strong style="color:var(--c-purple)">Analyze</strong> for personalized AI insights about your spending.</div>
