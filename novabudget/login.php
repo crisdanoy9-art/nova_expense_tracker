@@ -363,7 +363,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
       <div class="auth-foot">
-        No account? &nbsp;<a href="<?= APP_BASE ?>/register.php">Create New Account →</a>
+        No account? &nbsp;<a href="<?= APP_BASE ?>/register.php">Create Account →</a>
       </div>
     </div>
   </div>
