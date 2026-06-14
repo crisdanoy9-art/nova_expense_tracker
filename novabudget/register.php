@@ -285,7 +285,6 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
     <!-- Body -->
       <div style="text-align: center;">
         <div class="card-heading">REGISTER NOW</div>
-        <div class="card-subhead">Register now - Explore My Expense Tracker</div>
       </div>
       <!-- Benefit pills -->
       <div class="benefit-row">
