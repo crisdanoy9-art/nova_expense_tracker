@@ -209,16 +209,7 @@ INSERT INTO categories (user_id, name, emoji, color, is_system, sort_order) VALU
 -- ── DEMO USER (password: demo1234 — Argon2id hash) ──
 -- Replace hash below with: password_hash('demo1234', PASSWORD_ARGON2ID) from PHP
 -- This is a bcrypt fallback; change to Argon2id in production
-INSERT INTO users (id, name, email, password_hash, avatar_initials, plan, email_verified)
-VALUES (
-  uuid_generate_v4(),
-  'Jamie Doe',
-  'demo@novabudget.ai',
-  '$2y$12$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', -- password: demo1234
-  'JD',
-  'pro',
-  TRUE
-);
+
 
 -- Copy system categories to demo user
 INSERT INTO categories (user_id, name, emoji, color, is_system, sort_order)
