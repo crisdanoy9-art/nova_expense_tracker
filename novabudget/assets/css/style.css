@@ -464,3 +464,4 @@ textarea.fc{resize:vertical;min-height:88px}
   .page-content{padding:16px 14px}.stat-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:480px){.stat-grid,.g2,.g3,.g4{grid-template-columns:1fr}.cal-cell{min-height:55px}}
+
