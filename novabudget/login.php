@@ -351,9 +351,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="check-row">
           <label class="check-label">
-            <input type="checkbox" name="remember"> Remember Me
+            <input type="checkbox" name="remember"> Remember  Me?
           </label>
-          <a class="link-dim" href="<?= APP_BASE ?>/login.php">Forget?</a>
+          <a class="link-dim" href="<?= APP_BASE ?>/login.php">Forget Password?</a>
         </div>
 
         <button type="submit" class="btn-launch" id="submit-btn" data-original='<i class="bi bi-box-arrow-in-right"></i> &nbsp;AUTHENTICATE'>
