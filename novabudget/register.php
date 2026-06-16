@@ -169,15 +169,7 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                     </button>
                 </form>
 
-                <div class="divider" style="margin: 24px 0 16px;">
-                    <span>Already registered?</span>
-                </div>
-
-                <div style="text-align: center;">
-                    <a href="<?= APP_BASE ?>/login.php" class="btn-outline" style="width: 100%; display: flex; justify-content: center;">
-                        Sign In
-                    </a>
-                </div>
+                <!-- "Already registered?" section completely removed -->
             </div>
         </div>
     </div>
