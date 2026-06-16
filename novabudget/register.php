@@ -163,13 +163,17 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                             I agree to the <a href="#" style="color: var(--c-cyan);">Terms</a> and <a href="#" style="color: var(--c-cyan);">Privacy Policy</a>.
                         </label>
                     </div>
-
-                    <button type="submit" class="btn-glow" style="width: 100%; padding: 12px;">
-                        <i class="bi bi-person-plus-fill"></i> Create Account
-                    </button>
                 </form>
 
-                <!-- "Already registered?" section completely removed -->
+                <div class="divider" style="margin: 24px 0 16px;">
+                    <span>Already registered?</span>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="<?= APP_BASE ?>/login.php" class="btn-outline" style="width: 100%; display: flex; justify-content: center;">
+                        Sign In
+                    </a>
+                </div>
             </div>
         </div>
     </div>
