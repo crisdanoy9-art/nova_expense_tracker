@@ -85,6 +85,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 14px;
             margin-bottom: 24px;
         }
+        /* Icon inside input container – refined positioning */
+        .input-wrap {
+            position: relative;
+        }
+        .input-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: var(--text3);
+            pointer-events: none;
+            transition: color 0.2s;
+            z-index: 2;
+        }
+        .input-wrap .fc {
+            padding-left: 38px !important;
+            width: 100%;
+        }
+        /* Ensure the eye button stays on the right */
+        .input-eye {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: var(--text3);
+            cursor: pointer;
+            z-index: 2;
+        }
+        .input-eye:hover {
+            color: var(--c-cyan);
+        }
     </style>
 </head>
 <body>
