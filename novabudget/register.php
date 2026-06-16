@@ -81,6 +81,64 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="<?= APP_BASE ?>/assets/css/style.css">
+    <style>
+        .auth-heading {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            transition: all 0.25s ease;
+            cursor: default;
+            display: inline-block;
+            width: 100%;
+        }
+        .auth-heading:hover {
+            text-shadow: 0 0 12px rgba(0,229,255,0.6);
+            transform: scale(1.02);
+        }
+        .auth-sub {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 24px;
+            transition: color 0.2s;
+        }
+        .auth-sub:hover {
+            color: var(--c-cyan);
+        }
+        /* Icon inside input container – refined positioning */
+        .input-wrap {
+            position: relative;
+        }
+        .input-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: var(--text3);
+            pointer-events: none;
+            transition: color 0.2s;
+            z-index: 2;
+        }
+        .input-wrap .fc {
+            padding-left: 38px !important;
+            width: 100%;
+        }
+        .input-eye {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: var(--text3);
+            cursor: pointer;
+            z-index: 2;
+        }
+        .input-eye:hover {
+            color: var(--c-cyan);
+        }
+    </style>
 </head>
 <body>
     <div class="auth-wrap">
@@ -90,8 +148,8 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                 <div class="auth-tagline">Smart expense tracking</div>
             </div>
             <div class="auth-body">
-                <div class="auth-heading">Enlist Now</div>
-                <div class="auth-sub">Join the fleet and take control</div>
+                <div class="auth-heading">✨ Create Your Account ✨</div>
+                <div class="auth-sub">Join thousands of smart spenders – it's free!</div>
 
                 <?php if ($globalErrors): ?>
                     <?php foreach ($globalErrors as $err): ?>
@@ -107,23 +165,32 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                     <div class="g2" style="margin-bottom: 16px;">
                         <div class="form-group">
                             <label class="fc-label" for="fname">First name *</label>
-                            <input type="text" name="fname" id="fname" class="fc <?= isset($errors['fname']) ? 'err' : '' ?>" 
-                                   value="<?= h($fd['fname']) ?>" placeholder="Juan" required>
+                            <div class="input-wrap">
+                                <i class="bi bi-person input-icon"></i>
+                                <input type="text" name="fname" id="fname" class="fc <?= isset($errors['fname']) ? 'err' : '' ?>" 
+                                       value="<?= h($fd['fname']) ?>" placeholder="Juan" required>
+                            </div>
                             <?php if (isset($errors['fname'])): ?>
                                 <div class="field-err" style="display: block;"><?= h($errors['fname']) ?></div>
                             <?php endif; ?>
                         </div>
                         <div class="form-group">
                             <label class="fc-label" for="lname">Last name</label>
-                            <input type="text" name="lname" id="lname" class="fc" 
-                                   value="<?= h($fd['lname']) ?>" placeholder="Dela Cruz">
+                            <div class="input-wrap">
+                                <i class="bi bi-person input-icon"></i>
+                                <input type="text" name="lname" id="lname" class="fc" 
+                                       value="<?= h($fd['lname']) ?>" placeholder="Dela Cruz">
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group" style="margin-bottom: 16px;">
                         <label class="fc-label" for="email">Email *</label>
-                        <input type="email" name="email" id="email" class="fc <?= isset($errors['email']) ? 'err' : '' ?>" 
-                               value="<?= h($fd['email']) ?>" placeholder="you@example.com" required>
+                        <div class="input-wrap">
+                            <i class="bi bi-envelope input-icon"></i>
+                            <input type="email" name="email" id="email" class="fc <?= isset($errors['email']) ? 'err' : '' ?>" 
+                                   value="<?= h($fd['email']) ?>" placeholder="you@example.com" required>
+                        </div>
                         <?php if (isset($errors['email'])): ?>
                             <div class="field-err" style="display: block;"><?= h($errors['email']) ?></div>
                         <?php endif; ?>
@@ -132,6 +199,7 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                     <div class="form-group" style="margin-bottom: 16px;">
                         <label class="fc-label" for="password">Password *</label>
                         <div class="input-wrap">
+                            <i class="bi bi-lock input-icon"></i>
                             <input type="password" name="password" id="password" class="fc has-eye <?= isset($errors['pass']) ? 'err' : '' ?>" 
                                    placeholder="Minimum 8 characters" required>
                             <button type="button" class="input-eye" onclick="togglePassword('password')">
@@ -146,6 +214,7 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                     <div class="form-group" style="margin-bottom: 16px;">
                         <label class="fc-label" for="confirm">Confirm password *</label>
                         <div class="input-wrap">
+                            <i class="bi bi-shield-lock input-icon"></i>
                             <input type="password" name="confirm" id="confirm" class="fc has-eye <?= isset($errors['conf']) ? 'err' : '' ?>" 
                                    placeholder="Repeat password" required>
                             <button type="button" class="input-eye" onclick="togglePassword('confirm')">
@@ -163,6 +232,10 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                             I agree to the <a href="#" style="color: var(--c-cyan);">Terms</a> and <a href="#" style="color: var(--c-cyan);">Privacy Policy</a>.
                         </label>
                     </div>
+
+                    <button type="submit" class="btn-glow" style="width: 100%; padding: 12px;">
+                        <i class="bi bi-person-plus-fill"></i> Create Account
+                    </button>
                 </form>
 
                 <div class="divider" style="margin: 24px 0 16px;">
