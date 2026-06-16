@@ -87,7 +87,7 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
         <div class="auth-card">
             <div class="auth-top">
                 <div class="auth-logo"><?= APP_NAME ?></div>
-                <div class="auth-tagline">Create your account</div>
+                <div class="auth-tagline">Smart expense tracking</div>
             </div>
             <div class="auth-body">
                 <div class="auth-heading">Enlist Now</div>
