@@ -101,6 +101,7 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
             font-size: 14px;
             margin-bottom: 24px;
             transition: color 0.2s;
+            font-weight: 700;
         }
         .auth-sub:hover {
             color: var(--c-cyan);
@@ -148,7 +149,6 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
                 <div class="auth-tagline">Smart expense tracking</div>
             </div>
             <div class="auth-body">
-                <div class="auth-heading">✨ Create Your Account ✨</div>
                 <div class="auth-sub">Join thousands of smart spenders – it's free!</div>
 
                 <?php if ($globalErrors): ?>
