@@ -40,6 +40,7 @@ body::after{
 .auth-wrap{
   min-height:100vh;display:flex;align-items:center;
   justify-content:center;padding:24px;position:relative;z-index:1;
+  background:var(--bg0);   /* ensures login & register backgrounds match */
 }
 .auth-card{
   width:100%;max-width:450px;background:var(--bg2);
@@ -548,4 +549,3 @@ textarea.fc{resize:vertical;min-height:88px}
         padding: 16px 16px 14px !important;
     }
 }
-
