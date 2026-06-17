@@ -82,100 +82,82 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="<?= APP_BASE ?>/assets/css/style.css">
     <style>
-        /* ---- Enhanced container size ---- */
+        /* ---- Make the registration card smaller ---- */
         .auth-card {
-            max-width: 560px !important;
-            border-radius: 24px !important;
-            padding: 0 !important;
+            max-width: 420px !important;
+            border-radius: 20px !important;
         }
         .auth-body {
-            padding: 36px 40px 40px !important;
+            padding: 28px 28px 32px !important;
         }
         .auth-top {
-            padding: 34px 40px 28px !important;
+            padding: 26px 28px 22px !important;
         }
-        .auth-heading {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            transition: all 0.25s ease;
-            cursor: default;
-            display: inline-block;
-            width: 100%;
+        .auth-logo {
+            font-size: 24px !important;
         }
-        .auth-heading:hover {
-            text-shadow: 0 0 12px rgba(0,229,255,0.6);
-            transform: scale(1.02);
+        .auth-tagline {
+            font-size: 12px !important;
         }
         .auth-sub {
-            text-align: center;
-            font-size: 15px;
-            margin-bottom: 28px;
-            transition: color 0.2s;
-            font-weight: 700;
-        }
-        .auth-sub:hover {
-            color: var(--c-cyan);
-        }
-
-        /* ---- Larger inputs ---- */
-        .input-wrap .fc {
-            padding: 14px 14px 14px 44px !important;
-            font-size: 15px !important;
-            border-radius: 12px !important;
-        }
-        .input-icon {
-            left: 14px !important;
-            font-size: 18px !important;
-        }
-        .input-eye {
-            right: 14px !important;
-            font-size: 18px !important;
-        }
-        .fc-label {
             font-size: 13px !important;
-            margin-bottom: 6px !important;
-        }
-        .g2 {
-            gap: 20px !important;
             margin-bottom: 20px !important;
         }
-        .btn-glow {
-            padding: 14px !important;
+
+        /* ---- Smaller inputs ---- */
+        .input-wrap .fc {
+            padding: 11px 12px 11px 38px !important;
+            font-size: 13.5px !important;
+            border-radius: 10px !important;
+        }
+        .input-icon {
+            left: 12px !important;
             font-size: 15px !important;
-            border-radius: 40px !important;
+        }
+        .input-eye {
+            right: 12px !important;
+            font-size: 15px !important;
+        }
+        .fc-label {
+            font-size: 12px !important;
+            margin-bottom: 4px !important;
+        }
+        .g2 {
+            gap: 14px !important;
+            margin-bottom: 14px !important;
+        }
+        .btn-glow {
+            padding: 11px !important;
+            font-size: 13.5px !important;
+            border-radius: 30px !important;
         }
         .check-label {
-            font-size: 13.5px !important;
+            font-size: 12px !important;
         }
         .divider {
-            margin: 28px 0 20px !important;
+            margin: 22px 0 14px !important;
+            font-size: 11px !important;
         }
         .btn-outline {
-            padding: 12px !important;
-            font-size: 14px !important;
+            padding: 10px !important;
+            font-size: 13px !important;
         }
 
-        /* ---- Field errors ---- */
         .field-err {
-            font-size: 12px !important;
-            margin-top: 5px !important;
+            font-size: 11px !important;
+            margin-top: 4px !important;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 480px) {
             .auth-card {
                 max-width: 100% !important;
-                border-radius: 16px !important;
+                border-radius: 14px !important;
             }
             .auth-body {
-                padding: 28px 24px 32px !important;
+                padding: 24px 20px 28px !important;
             }
             .auth-top {
-                padding: 28px 24px 22px !important;
-            }
-            .g2 {
-                gap: 14px !important;
+                padding: 22px 20px 18px !important;
             }
         }
     </style>
