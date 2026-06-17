@@ -81,88 +81,8 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="<?= APP_BASE ?>/assets/css/style.css">
-    <style>
-        /* ---- Make the registration card smaller ---- */
-        .auth-card {
-            max-width: 420px !important;
-            border-radius: 20px !important;
-        }
-        .auth-body {
-            padding: 28px 28px 32px !important;
-        }
-        .auth-top {
-            padding: 26px 28px 22px !important;
-        }
-        .auth-logo {
-            font-size: 24px !important;
-        }
-        .auth-tagline {
-            font-size: 12px !important;
-        }
-        .auth-sub {
-            font-size: 13px !important;
-            margin-bottom: 20px !important;
-        }
-
-        /* ---- Smaller inputs ---- */
-        .input-wrap .fc {
-            padding: 11px 12px 11px 38px !important;
-            font-size: 13.5px !important;
-            border-radius: 10px !important;
-        }
-        .input-icon {
-            left: 12px !important;
-            font-size: 15px !important;
-        }
-        .input-eye {
-            right: 12px !important;
-            font-size: 15px !important;
-        }
-        .fc-label {
-            font-size: 12px !important;
-            margin-bottom: 4px !important;
-        }
-        .g2 {
-            gap: 14px !important;
-            margin-bottom: 14px !important;
-        }
-        .btn-glow {
-            padding: 11px !important;
-            font-size: 13.5px !important;
-            border-radius: 30px !important;
-        }
-        .check-label {
-            font-size: 12px !important;
-        }
-        .divider {
-            margin: 22px 0 14px !important;
-            font-size: 11px !important;
-        }
-        .btn-outline {
-            padding: 10px !important;
-            font-size: 13px !important;
-        }
-
-        .field-err {
-            font-size: 11px !important;
-            margin-top: 4px !important;
-        }
-
-        @media (max-width: 480px) {
-            .auth-card {
-                max-width: 100% !important;
-                border-radius: 14px !important;
-            }
-            .auth-body {
-                padding: 24px 20px 28px !important;
-            }
-            .auth-top {
-                padding: 22px 20px 18px !important;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="register-page">
     <div class="auth-wrap">
         <div class="auth-card">
             <div class="auth-top">
