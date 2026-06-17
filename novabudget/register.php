@@ -82,6 +82,18 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="<?= APP_BASE ?>/assets/css/style.css">
     <style>
+        /* ---- Enhanced container size ---- */
+        .auth-card {
+            max-width: 560px !important;
+            border-radius: 24px !important;
+            padding: 0 !important;
+        }
+        .auth-body {
+            padding: 36px 40px 40px !important;
+        }
+        .auth-top {
+            padding: 34px 40px 28px !important;
+        }
         .auth-heading {
             text-align: center;
             font-size: 28px;
@@ -98,46 +110,73 @@ $globalErrors = array_filter($errors, 'is_int', ARRAY_FILTER_USE_KEY);
         }
         .auth-sub {
             text-align: center;
-            font-size: 14px;
-            margin-bottom: 24px;
+            font-size: 15px;
+            margin-bottom: 28px;
             transition: color 0.2s;
             font-weight: 700;
         }
         .auth-sub:hover {
             color: var(--c-cyan);
         }
-        /* Icon inside input container – refined positioning */
-        .input-wrap {
-            position: relative;
+
+        /* ---- Larger inputs ---- */
+        .input-wrap .fc {
+            padding: 14px 14px 14px 44px !important;
+            font-size: 15px !important;
+            border-radius: 12px !important;
         }
         .input-icon {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 16px;
-            color: var(--text3);
-            pointer-events: none;
-            transition: color 0.2s;
-            z-index: 2;
-        }
-        .input-wrap .fc {
-            padding-left: 38px !important;
-            width: 100%;
+            left: 14px !important;
+            font-size: 18px !important;
         }
         .input-eye {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: transparent;
-            border: none;
-            color: var(--text3);
-            cursor: pointer;
-            z-index: 2;
+            right: 14px !important;
+            font-size: 18px !important;
         }
-        .input-eye:hover {
-            color: var(--c-cyan);
+        .fc-label {
+            font-size: 13px !important;
+            margin-bottom: 6px !important;
+        }
+        .g2 {
+            gap: 20px !important;
+            margin-bottom: 20px !important;
+        }
+        .btn-glow {
+            padding: 14px !important;
+            font-size: 15px !important;
+            border-radius: 40px !important;
+        }
+        .check-label {
+            font-size: 13.5px !important;
+        }
+        .divider {
+            margin: 28px 0 20px !important;
+        }
+        .btn-outline {
+            padding: 12px !important;
+            font-size: 14px !important;
+        }
+
+        /* ---- Field errors ---- */
+        .field-err {
+            font-size: 12px !important;
+            margin-top: 5px !important;
+        }
+
+        @media (max-width: 600px) {
+            .auth-card {
+                max-width: 100% !important;
+                border-radius: 16px !important;
+            }
+            .auth-body {
+                padding: 28px 24px 32px !important;
+            }
+            .auth-top {
+                padding: 28px 24px 22px !important;
+            }
+            .g2 {
+                gap: 14px !important;
+            }
         }
     </style>
 </head>
