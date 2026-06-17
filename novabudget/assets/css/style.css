@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════
    NovaBudget — style.css
-   Full dark space theme
+   Full dark space theme (non‑black auth background)
 ════════════════════════════════════════ */
 :root {
   --bg0:#05080f;--bg1:#0b1120;--bg2:#101929;--bg3:rgba(255,255,255,.04);
@@ -40,7 +40,7 @@ body::after{
 .auth-wrap{
   min-height:100vh;display:flex;align-items:center;
   justify-content:center;padding:24px;position:relative;z-index:1;
-  background:var(--bg0);   /* ensures login & register backgrounds match */
+  background:var(--bg2);   /* dark blue‑grey, not black */
 }
 .auth-card{
   width:100%;max-width:450px;background:var(--bg2);
